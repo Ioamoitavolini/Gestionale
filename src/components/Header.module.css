@@ -1,0 +1,124 @@
+.header {
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+}
+
+.logoIcon {
+  font-size: 24px;
+}
+
+.logoText {
+  font-weight: 600;
+  color: #4caf50;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+  flex: 1;
+  margin: 0 40px;
+}
+
+.navItem {
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navItem:hover {
+  color: #4caf50;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.userName {
+  font-size: 14px;
+  color: #666;
+}
+
+.logoutBtn {
+  paddin: 8px 16px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.logoutBtn:hover {
+  background-color: #da190b;
+}
+
+.mobileToggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    border-bottom: 1px solid #eee;
+  }
+
+  .navOpen {
+    max-height: 300px;
+  }
+
+  .navItem {
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .mobileToggle {
+    display: block;
+  }
+
+  .container {
+    height: auto;
+    padding: 0;
+  }
+}
